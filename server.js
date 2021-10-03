@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Oh Hello");
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 console.log(`Heroku Port No. Is ${process.env.PORT}`);
